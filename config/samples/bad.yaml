@@ -1,0 +1,7 @@
+apiVersion: mlops.cnvrg.io/v1
+kind: InfiniteLoop
+metadata:
+  name: good
+spec:
+  addToleration: "true"
+  addEmptyStatus: "true"

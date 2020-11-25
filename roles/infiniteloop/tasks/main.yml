@@ -1,0 +1,11 @@
+---
+# tasks file for InifiniteLoop
+- name: Create test pod
+  k8s:
+    state: "present"
+    definition: "{{ lookup('template', 'templates/test-pod.yml') }}"
+
+- name: Create test crd
+  k8s:
+    state: "present"
+    definition: "{{ lookup('template', 'templates/test-crd.yaml') }}"

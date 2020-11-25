@@ -1,0 +1,20 @@
+# permissions for end users to view infiniteloops.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: infiniteloop-viewer-role
+rules:
+- apiGroups:
+  - mlops.cnvrg.io
+  resources:
+  - infiniteloops
+  verbs:
+  - get
+  - list
+  - watch
+- apiGroups:
+  - mlops.cnvrg.io
+  resources:
+  - infiniteloops/status
+  verbs:
+  - get
